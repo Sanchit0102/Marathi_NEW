@@ -4,9 +4,9 @@ then
   git clone https://github.com/searchingshiv/mirrorbot.git /mirrorbot
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /mirrorbot
+  git clone $UPSTREAM_REPO /spidyauto
 fi
-cd /mirrorbot
+cd /spidyauto
 pip3 install -U -r requirements.txt
 echo "Starting Bot...."
 python3 bot.py
