@@ -46,7 +46,7 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('↼ Eᴀʀɴ Mᴏɴᴇʏ', callback_data="shortlink_info"),
+                    InlineKeyboardButton('↼ ᴅɪscusion Gʀᴏᴜᴘ', url="https://t.me/+wiPJ72U29pw3NDQ1"),
                     InlineKeyboardButton('Mᴏᴠɪᴇ Gʀᴏᴜᴘ ⇀', url=GRP_LNK)
                 ],[
                     InlineKeyboardButton('↼ Hᴇʟᴘ', callback_data='help'),
@@ -956,65 +956,65 @@ async def deletemultiplefiles(bot, message):
         parse_mode=enums.ParseMode.HTML
     )
 
-@Client.on_message(filters.command("set_shortner"))
-async def shortlink(bot, message):
-    userid = message.from_user.id if message.from_user else None
-    if not userid:
-        return await message.reply(f"You are anonymous admin. Turn off anonymous admin and try again this command")
-    chat_type = message.chat.type
-    if chat_type == enums.ChatType.PRIVATE:
-        return await message.reply_text(f"<b>Hey {message.from_user.mention}, This command only works on groups !\n\n<u>Follow These Steps to Connect Shortener:</u>\n\n1. Add Me in Your Group with Full Admin Rights\n\n2. After Adding in Grp, Set your Shortener\n\nSend this command in your group\n\n—> /set_shortner ""{your_shortener_website_name} {your_shortener_api}\n\n#Sample:-\n/set_shortner  urlshortx.com aacda989a636df49b60ebd363b56dd5e82095eec\n\nThat's it!!! Enjoy Earning Money 💲\n\n[[[ Trusted Earning Site - https://urlshortx.com/ref/Spidynaik ]]]\n\nIf you have any Doubts, Feel Free to Ask me - @Mr_SPIDYBot</b>")
-    elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        grpid = message.chat.id
-        title = message.chat.title
-    else:
-        return
-    data = message.text
-    userid = message.from_user.id
-    user = await bot.get_chat_member(grpid, userid)
-    if user.status != enums.ChatMemberStatus.ADMINISTRATOR and user.status != enums.ChatMemberStatus.OWNER and str(userid) not in ADMINS:
-        return await message.reply_text("<b>You don't have access to use this command!\n\nAdd Me to Your Own Group as Admin and Try This Command\n\nFor More PM Me With This Command</b>")
-    else:
-        pass
-    try:
-        command, shortlink_url, api = data.split(" ")
-    except:
-        return await message.reply_text("<b>Command Incomplete :(\n\nGive me a shortener website link and api along with the command !\n\nFormat: <code>/shortlink .com aacda989a636df49b60ebd363b56dd5e82095eec1</code></b>")
-    reply = await message.reply_text("<b>Please Wait...</b>")
-    shortlink_url = re.sub(r"https?://?", "", shortlink_url)
-    shortlink_url = re.sub(r"[:/]", "", shortlink_url)
-    await save_group_settings(grpid, 'shortlink', shortlink_url)
-    await save_group_settings(grpid, 'shortlink_api', api)
-    await save_group_settings(grpid, 'is_shortlink', True)
-    await reply.edit_text(f"<b>Successfully added shortlink API for {title}.\n\nCurrent Shortlink Website: <code>{shortlink_url}</code>\nCurrent API: <code>{api}</code></b>")
+# @Client.on_message(filters.command("set_shortner"))
+# async def shortlink(bot, message):
+#     userid = message.from_user.id if message.from_user else None
+#     if not userid:
+#         return await message.reply(f"You are anonymous admin. Turn off anonymous admin and try again this command")
+#     chat_type = message.chat.type
+#     if chat_type == enums.ChatType.PRIVATE:
+#         return await message.reply_text(f"<b>Hey {message.from_user.mention}, This command only works on groups !\n\n<u>Follow These Steps to Connect Shortener:</u>\n\n1. Add Me in Your Group with Full Admin Rights\n\n2. After Adding in Grp, Set your Shortener\n\nSend this command in your group\n\n—> /set_shortner ""{your_shortener_website_name} {your_shortener_api}\n\n#Sample:-\n/set_shortner  urlshortx.com aacda989a636df49b60ebd363b56dd5e82095eec\n\nThat's it!!! Enjoy Earning Money 💲\n\n[[[ Trusted Earning Site - https://urlshortx.com/ref/Spidynaik ]]]\n\nIf you have any Doubts, Feel Free to Ask me - @Mr_SPIDYBot</b>")
+#     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+#         grpid = message.chat.id
+#         title = message.chat.title
+#     else:
+#         return
+#     data = message.text
+#     userid = message.from_user.id
+#     user = await bot.get_chat_member(grpid, userid)
+#     if user.status != enums.ChatMemberStatus.ADMINISTRATOR and user.status != enums.ChatMemberStatus.OWNER and str(userid) not in ADMINS:
+#         return await message.reply_text("<b>You don't have access to use this command!\n\nAdd Me to Your Own Group as Admin and Try This Command\n\nFor More PM Me With This Command</b>")
+#     else:
+#         pass
+#     try:
+#         command, shortlink_url, api = data.split(" ")
+#     except:
+#         return await message.reply_text("<b>Command Incomplete :(\n\nGive me a shortener website link and api along with the command !\n\nFormat: <code>/shortlink .com aacda989a636df49b60ebd363b56dd5e82095eec1</code></b>")
+#     reply = await message.reply_text("<b>Please Wait...</b>")
+#     shortlink_url = re.sub(r"https?://?", "", shortlink_url)
+#     shortlink_url = re.sub(r"[:/]", "", shortlink_url)
+#     await save_group_settings(grpid, 'shortlink', shortlink_url)
+#     await save_group_settings(grpid, 'shortlink_api', api)
+#     await save_group_settings(grpid, 'is_shortlink', True)
+#     await reply.edit_text(f"<b>Successfully added shortlink API for {title}.\n\nCurrent Shortlink Website: <code>{shortlink_url}</code>\nCurrent API: <code>{api}</code></b>")
     
-@Client.on_message(filters.command("setshortlinkoff") & filters.user(ADMINS))
-async def offshortlink(bot, message):
-    chat_type = message.chat.type
-    if chat_type == enums.ChatType.PRIVATE:
-        return await message.reply_text("I will Work Only in group")
-    elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        grpid = message.chat.id
-        title = message.chat.title
-    else:
-        return
-    await save_group_settings(grpid, 'is_shortlink', False)
-    # ENABLE_SHORTLINK = False
-    return await message.reply_text("Successfully disabled shortlink")
+# @Client.on_message(filters.command("setshortlinkoff") & filters.user(ADMINS))
+# async def offshortlink(bot, message):
+#     chat_type = message.chat.type
+#     if chat_type == enums.ChatType.PRIVATE:
+#         return await message.reply_text("I will Work Only in group")
+#     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+#         grpid = message.chat.id
+#         title = message.chat.title
+#     else:
+#         return
+#     await save_group_settings(grpid, 'is_shortlink', False)
+#     # ENABLE_SHORTLINK = False
+#     return await message.reply_text("Successfully disabled shortlink")
     
-@Client.on_message(filters.command("setshortlinkon") & filters.user(ADMINS))
-async def onshortlink(bot, message):
-    chat_type = message.chat.type
-    if chat_type == enums.ChatType.PRIVATE:
-        return await message.reply_text("I will Work Only in group")
-    elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        grpid = message.chat.id
-        title = message.chat.title
-    else:
-        return
-    await save_group_settings(grpid, 'is_shortlink', True)
-    # ENABLE_SHORTLINK = True
-    return await message.reply_text("Successfully enabled shortlink")
+# @Client.on_message(filters.command("setshortlinkon") & filters.user(ADMINS))
+# async def onshortlink(bot, message):
+#     chat_type = message.chat.type
+#     if chat_type == enums.ChatType.PRIVATE:
+    #     return await message.reply_text("I will Work Only in group")
+    # elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+    #     grpid = message.chat.id
+    #     title = message.chat.title
+    # else:
+    #     return
+    # await save_group_settings(grpid, 'is_shortlink', True)
+    # # ENABLE_SHORTLINK = True
+    # return await message.reply_text("Successfully enabled shortlink")
 
 @Client.on_message(filters.command("get_info"))
 async def showshortlink(bot, message):
@@ -1061,58 +1061,58 @@ async def showshortlink(bot, message):
             return await message.reply_text("Shortener url and Tutorial Link Not Connected. Check this commands, /shortlink and /set_tutorial")
 
 
-@Client.on_message(filters.command("set_tutorial"))
-async def settutorial(bot, message):
-    userid = message.from_user.id if message.from_user else None
-    if not userid:
-        return await message.reply(f"You are anonymous admin. Turn off anonymous admin and try again this command")
-    chat_type = message.chat.type
-    if chat_type == enums.ChatType.PRIVATE:
-        return await message.reply_text("This Command Work Only in group\n\nTry it in your own group")
-    elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        grpid = message.chat.id
-        title = message.chat.title
-    else:
-        return
-    userid = message.from_user.id
-    user = await bot.get_chat_member(grpid, userid)
-    if user.status != enums.ChatMemberStatus.ADMINISTRATOR and user.status != enums.ChatMemberStatus.OWNER and str(userid) not in ADMINS:
-        return
-    else:
-        pass
-    if len(message.command) == 1:
-        return await message.reply("<b>Give me a tutorial link along with this command\n\nCommand Usage: /set_tutorial your tutorial link</b>")
-    elif len(message.command) == 2:
-        reply = await message.reply_text("<b>Please Wait...</b>")
-        tutorial = message.command[1]
-        await save_group_settings(grpid, 'tutorial', tutorial)
-        await save_group_settings(grpid, 'is_tutorial', True)
-        await reply.edit_text(f"<b>Successfully Added Tutorial\n\nHere is your tutorial link for your group {title} - <code>{tutorial}</code></b>")
-    else:
-        return await message.reply("<b>You entered Incorrect Format\n\nFormat: /set_tutorial your tutorial link</b>")
+# @Client.on_message(filters.command("set_tutorial"))
+# async def settutorial(bot, message):
+#     userid = message.from_user.id if message.from_user else None
+#     if not userid:
+#         return await message.reply(f"You are anonymous admin. Turn off anonymous admin and try again this command")
+#     chat_type = message.chat.type
+#     if chat_type == enums.ChatType.PRIVATE:
+#         return await message.reply_text("This Command Work Only in group\n\nTry it in your own group")
+#     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+#         grpid = message.chat.id
+#         title = message.chat.title
+#     else:
+#         return
+#     userid = message.from_user.id
+#     user = await bot.get_chat_member(grpid, userid)
+#     if user.status != enums.ChatMemberStatus.ADMINISTRATOR and user.status != enums.ChatMemberStatus.OWNER and str(userid) not in ADMINS:
+#         return
+#     else:
+#         pass
+#     if len(message.command) == 1:
+#         return await message.reply("<b>Give me a tutorial link along with this command\n\nCommand Usage: /set_tutorial your tutorial link</b>")
+#     elif len(message.command) == 2:
+#         reply = await message.reply_text("<b>Please Wait...</b>")
+#         tutorial = message.command[1]
+#         await save_group_settings(grpid, 'tutorial', tutorial)
+#         await save_group_settings(grpid, 'is_tutorial', True)
+#         await reply.edit_text(f"<b>Successfully Added Tutorial\n\nHere is your tutorial link for your group {title} - <code>{tutorial}</code></b>")
+#     else:
+#         return await message.reply("<b>You entered Incorrect Format\n\nFormat: /set_tutorial your tutorial link</b>")
 
-@Client.on_message(filters.command("remove_tutorial"))
-async def removetutorial(bot, message):
-    userid = message.from_user.id if message.from_user else None
-    if not userid:
-        return await message.reply(f"You are anonymous admin. Turn off anonymous admin and try again this command")
-    chat_type = message.chat.type
-    if chat_type == enums.ChatType.PRIVATE:
-        return await message.reply_text("This Command Work Only in group\n\nTry it in your own group")
-    elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        grpid = message.chat.id
-        title = message.chat.title
-    else:
-        return
-    userid = message.from_user.id
-    user = await bot.get_chat_member(grpid, userid)
-    if user.status != enums.ChatMemberStatus.ADMINISTRATOR and user.status != enums.ChatMemberStatus.OWNER and str(userid) not in ADMINS:
-        return
-    else:
-        pass
-    reply = await message.reply_text("<b>Please Wait...</b>")
-    await save_group_settings(grpid, 'is_tutorial', False)
-    await reply.edit_text(f"<b>Successfully Removed Your Tutorial Link!!!</b>")
+# @Client.on_message(filters.command("remove_tutorial"))
+# async def removetutorial(bot, message):
+#     userid = message.from_user.id if message.from_user else None
+#     if not userid:
+#         return await message.reply(f"You are anonymous admin. Turn off anonymous admin and try again this command")
+#     chat_type = message.chat.type
+#     if chat_type == enums.ChatType.PRIVATE:
+#         return await message.reply_text("This Command Work Only in group\n\nTry it in your own group")
+#     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+#         grpid = message.chat.id
+#         title = message.chat.title
+#     else:
+#         return
+#     userid = message.from_user.id
+#     user = await bot.get_chat_member(grpid, userid)
+#     if user.status != enums.ChatMemberStatus.ADMINISTRATOR and user.status != enums.ChatMemberStatus.OWNER and str(userid) not in ADMINS:
+#         return
+#     else:
+#         pass
+#     reply = await message.reply_text("<b>Please Wait...</b>")
+#     await save_group_settings(grpid, 'is_tutorial', False)
+#     await reply.edit_text(f"<b>Successfully Removed Your Tutorial Link!!!</b>")
         
 @Client.on_message(filters.command("restart") & filters.user(ADMINS))
 async def stop_button(bot, message):
