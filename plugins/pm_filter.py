@@ -43,7 +43,7 @@ BUTTONS0 = {}
 BUTTONS1 = {}
 BUTTONS2 = {}
 SPELL_CHECK = {}
-ADMIN_USRNM = "UNKNOWN_MAN_ON_MISSION"
+ADMIN_USRNM = "searchingshiv"
 # ENABLE_SHORTLINK = ""
 
 @Client.on_message(filters.group | filters.private & filters.text & filters.incoming)
