@@ -194,7 +194,7 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 <b><a href=https://t.me/The_Silent_Teams>{file_name}</a>
 ▫️ Mᴀɪɴ Cʜᴀɴɴᴇʟ : <a href="https://t.me/The_Silent_Teams">@The_Silent_Teams</a>
 
-▫️ Mᴀɪɴ Cʜᴀɴɴᴇʟ : <a href="https://t.me/+TT2fFOnZlsA0MGFl>The Silent Hub</a></b>""" 
+▫️ Mᴀɪɴ Cʜᴀɴɴᴇʟ : <a href="https://t.me/+TT2fFOnZlsA0MGFl">The Silent Hub</a></b>""" 
 
     FORCE_SUB = """
 **⚠️ Pʟᴇᴀsᴇ ғᴏʟʟᴏᴡ ᴛʜɪs ʀᴜʟe ⚠️
