@@ -193,7 +193,7 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
     CAPTION = """
 <b><a href=https://t.me/The_Silent_Teams>{file_name}</a>
 
-▫️ Mᴀɪɴ Cʜᴀɴɴᴇʟ : <a href="https://t.me/The_Silent_Teams">𝗧𝗵𝗲 𝗦𝗶𝗹𝗲𝗻𝘁 𝗧𝗲𝗮𝗺𝘀</a>
+▫️ Mᴀɪɴ Cʜᴀɴɴᴇʟ : <a href="https://t.me/The_Silent_Teams">𝗧𝗵𝗲 𝗦𝗶𝗹𝗲𝗻𝘁 𝗧𝗲𝗮𝗺</a>
 
 ▫️ Mᴀɪɴ Movie Cʜᴀɴɴᴇʟ : <a href="https://t.me/+TT2fFOnZlsA0MGFl">𝗧𝗵𝗲 𝗦𝗶𝗹𝗲𝗻𝘁 𝗛𝘂𝗯</a></b>""" 
 
