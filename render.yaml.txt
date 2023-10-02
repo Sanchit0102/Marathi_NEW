@@ -5,7 +5,7 @@ services:
     env: python
     startCommand: python3 bot.py
     buildCommand: pip3 install -U -r requirements.txt
-    repo: https://github.com/searchingshiv/mirrorbot.git # optional
+    repo: https://github.com/Sanchit0102/Marathi_NEW.git # optional
     region: oregon # optional (defaults to oregon)
     plan: free # optional (defaults to starter)
     branch: web # optional (defaults to master)
